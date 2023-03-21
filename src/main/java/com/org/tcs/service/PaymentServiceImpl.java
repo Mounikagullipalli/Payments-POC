@@ -21,16 +21,6 @@ public class PaymentServiceImpl implements PaymentService {
         Optional<Payment> j= paymentRepo.findById(paymentNumber);
         return j;
     }
-
-   /* public String updateNameById( Integer paymentNumber, String paymentName) {
-        Optional<Payment> pay = PaymentRepo.findById(paymentNumber);
-        Payment payment=pay.get();
-        payment.setPaymentName(paymentName);
-        PaymentRepo.save(payment);
-        return "succesfully";
-    }
-*/
-
     @Override
     public void updatePayment(Payment payment) {
 
