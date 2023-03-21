@@ -30,14 +30,7 @@ public class PaymentController {
 
         paymentService.updatePayment(payment);
     }
-   /* @PatchMapping("/updateNameById/{paymentNumber}/{paymentName}")
-    public String updateNameById(@PathVariable Integer paymentNumber,@PathVariable String paymentName ) {
-        String s1 = paymentService.updateNameById(paymentNumber, paymentName);
-        return s1;
-    }
-    */
-
-    @GetMapping("/getById/{paymentNumber}")
+   @GetMapping("/getById/{paymentNumber}")
     public Optional<Payment> getById(@PathVariable Integer paymentNumber){
       Optional<Payment> p=  paymentService.getById(paymentNumber);
       return p;
